@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carlson Gracie Irvine | Brazilian Jiu Jitsu in Tustin / Irvine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Carlson Gracie Irvine – Brazilian Jiu Jitsu academy in Tustin / Irvine, CA. Kids and adults classes, beginners welcome, world-class instruction."
+  />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --card: #0f172a;
+      --accent: #ef4444;
+      --accent-soft: rgba(239, 68, 68, 0.16);
+      --accent-strong: #f97373;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --radius-lg: 1.2rem;
+      --radius-full: 999px;
+      --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.8);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 8, 22, 0.92);
+      border-bottom: 1px solid rgba(30, 64, 175, 0.35);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.9rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      padding: 0.35rem 0.8rem;
+      border-radius: var(--radius-full);
+      color: var(--muted);
+      transition: 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+    }
+
+    .nav-cta {
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      background: var(--accent);
+      color: white !important;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 12px 30px rgba(239, 68, 68, 0.5);
+      border: 1px solid rgba(239, 68, 68, 0.8);
+    }
+
+    .nav-cta:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    /* Mobile nav */
+
+    .nav-toggle {
+      display: none;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .nav-links.mobile-hidden {
+      display: flex;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .section {
+      padding: 3.2rem 1.3rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 1.8rem;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      margin-bottom: 0.5rem;
+    }
+
+    h1,
+    h2 {
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 4vw, 3.1rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 2.4vw, 2rem);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-subtitle {
+      max-width: 30rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Hero */
+
+    .hero {
+      padding-top: 3.5rem;
+      padding-bottom: 3.7rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 2rem; /* nice spacing */
+      align-items: start;
+    }
+
+    .hero-lead {
+      font-size: 1.02rem;
+      max-width: 33rem;
+      color: #d1d5db;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-highlight-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-badge {
+      padding: 0.2rem 0.7rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      font-size: 0.78rem;
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top left, #f97316, #ef4444);
+      color: #fff;
+      border-color: rgba(248, 113, 113, 0.9);
+      box-shadow: 0 16px 40px rgba(239, 68, 68, 0.7);
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.8);
+      color: #e5e7eb;
+    }
+
+    .btn-outline:hover {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-meta-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.9);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, rgba(248, 113, 113, 0.25), rgba(15, 23, 42, 0.98));
+      border-radius: 1.6rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      padding: 1.6rem 1.5rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 0.2rem 0.7rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+    }
+
+    .hero-card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .hero-card-sub {
+      font-size: 0.86rem;
+      color: #f9fafb;
+    }
+
+    .hero-card-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.7rem;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .hero-card-label {
+      color: #cbd5f5;
+    }
+
+    .hero-card-value {
+      font-weight: 500;
+    }
+
+    .hero-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    .hero-pill {
+      font-size: 0.75rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+    }
+
+    .hero-note {
+      font-size: 0.75rem;
+      color: #e5e7eb;
+      opacity: 0.9;
+    }
+
+    /* Why section */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .why-card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.1rem 1.2rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      display: grid;
+      gap: 0.4rem;
+      position: relative;
+    }
+
+    .why-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: var(--radius-full);
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .why-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .why-text {
+      font-size: 0.86rem;
+      color: #d1d5db;
+    }
+
+    /* Programs */
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.4fr) minmax(0, 1.2fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .program-card {
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1.2rem 1.2rem 1.3rem;
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .program-tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      margin-bottom: 0.25rem;
+    }
+
+    .program-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .program-text {
+      font-size: 0.86rem;
+      color: #e5e7eb;
+    }
+
+    .program-meta {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .program-list {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #d1d5db;
+    }
+
+    .program-list li {
+      margin-bottom: 0.18rem;
+    }
+
+    /* Schedule */
+
+    .schedule-card {
+      background: rgba(15, 23, 42, 0.97);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1.25rem 1.25rem 1.35rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+
+    .schedule-day {
+      border-radius: 0.9rem;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 0.7rem 0.8rem;
+    }
+
+    .schedule-day-title {
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+      color: #e5e7eb;
+    }
+
+    .schedule-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.4rem;
+      margin-bottom: 0.25rem;
+      color: #d1d5db;
+    }
+
+    .schedule-note {
+      margin-top: 0.7rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Instructors & Facility */
+
+    .instructor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .instructor-card {
+      background: #111827;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    .instructor-photo {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .instructor-name {
+      font-weight: 600;
+    }
+
+    .instructor-role {
+      font-size: 0.8rem;
+      color: var(--accent-strong);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .instructor-bio {
+      font-size: 0.82rem;
+      color: #d1d5db;
+    }
+
+    .facility-grid {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr; /* text left, slideshow right */
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .facility-card {
+      background: rgba(15, 23, 42, 0.97);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 1.1rem 1.1rem 1.2rem;
+      font-size: 0.86rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .facility-list {
+      margin-top: 0.3rem;
+      font-size: 0.83rem;
+      color: #d1d5db;
+    }
+
+    .facility-list li {
+      margin-bottom: 0.18rem;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .slide-btn.prev { left: 10px; }
+    .slide-btn.next { right: 10px; }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.4fr);
+      gap: 1.6rem;
+      align-items: start;
+    }
+
+    form {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    label {
+      font-size: 0.82rem;
+      display: block;
+      margin-bottom: 0.18rem;
+      color: #d1d5db;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      font-size: 0.9rem;
+      padding: 0.55rem 0.75rem;
+      border-radius: 0.7rem;
+      border: 1px solid rgba(55, 65, 81, 0.95);
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--text);
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.7);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-info {
+      font-size: 0.86rem;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .contact-rows {
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .contact-label {
+      width: 70px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      padding: 0.22rem 0.65rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.97);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
+
+    .map-placeholder {
+      margin-top: 0.6rem;
+      border-radius: 0.9rem;
+      border: 1px dashed rgba(75, 85, 99, 0.9);
+      padding: 0.7rem 0.8rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1.6rem 1.2rem 2.2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    footer .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-social a {
+      font-size: 0.78rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .programs-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .why-grid,
+      .schedule-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .instructor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .facility-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links.mobile-open {
+        position: absolute;
+        inset: 100% 1rem auto 1rem;
+        display: grid;
+        background: rgba(15, 23, 42, 0.98);
+        border-radius: 0.9rem;
+        border: 1px solid rgba(55, 65, 81, 0.9);
+        padding: 0.6rem;
+        gap: 0.1rem;
+      }
+
+      .nav-links.mobile-open a {
+        padding: 0.5rem 0.7rem;
+        width: 100%;
+      }
+      /* Mobile logo resize + anti-distortion */
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-mark img {
+        object-fit: contain;   /* fixes distortion on mobile */
+        padding: 3px;
+        background-color: #050816;
+      }
+
+      .brand-name {
+        font-size: 0.8rem;
+      }
+
+      .brand-sub {
+        font-size: 0.62rem;
+      }
+
+
+      .hero {
+        padding-top: 2.4rem;
+      }
+
+      .why-grid,
+      .schedule-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .instructor-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER / NAV -->
+    <header>
+      <nav class="nav">
+        <a class="brand" href="#top">
+          <div class="brand-mark">
+            <img src="CGI.jpg" alt="Carlson Gracie Irvine logo">
+          </div>
+
+          <div class="brand-text">
+            <span class="brand-name">Carlson Gracie Irvine</span>
+            <span class="brand-sub">Brazilian Jiu Jitsu • Tustin / Irvine</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" type="button" onclick="toggleNav()">
+          <span>☰</span>
+        </button>
+
+        <div id="nav-links" class="nav-links mobile-hidden">
+          <a href="#programs">Programs</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#instructors">Instructors</a>
+          <a href="#facility">Facility</a>
+          <a href="#contact" class="nav-cta">Try a free class</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+
+      <!-- TOP SLIDESHOW -->
+      <section class="section top-slideshow">
+        <div class="slideshow" id="top-slideshow">
+          <img src="gymFight.png" class="slide" alt="Fight photo 3">
+          <img src="jasonFight.png" class="slide" alt="Fight photo 1">
+          <img src="jasonFlag.jpg" class="slide" alt="Fight photo 2">
+          
+          <img src="CGI LOGO 2.png" class="slide active" alt="Logo">
+          <button class="slide-btn prev" onclick="changeTopSlide(-1)">&#10094;</button>
+          <button class="slide-btn next" onclick="changeTopSlide(1)">&#10095;</button>
+        </div>
+      </section>
+
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="section-inner hero-grid">
+
+          
+          <div>
+            <div class="hero-highlight">
+              <span class="hero-highlight-dot"></span>
+              <span>Est. Carlson Gracie Team</span>
+            </div>
+
+            <h1>Brazilian Jiu Jitsu for every level in Tustin / Irvine.</h1>
+
+            <p class="hero-lead">
+              World-class Jiu Jitsu in a welcoming, hard-working environment.
+              Build confidence, get in shape, and learn real self-defense with
+              a proven Carlson Gracie curriculum.
+            </p>
+
+            <div class="hero-badges">
+              <span class="hero-badge">Kids &amp; Adults Classes</span>
+              <span class="hero-badge">Beginners Welcome</span>
+              <span class="hero-badge">Competition &amp; Hobbyist Friendly</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Book a free trial</a>
+              <a href="#schedule" class="btn btn-outline">View weekly schedule</a>
+            </div>
+
+            <div class="hero-meta">
+              <span>
+                <span class="hero-meta-dot"></span>
+                <strong>Location:</strong>&nbsp;1542 Edinger Ave, Suite F, Tustin, CA 92780
+              </span>
+              <span>
+                <span class="hero-meta-dot"></span>
+                <strong>Call / Text:</strong>&nbsp;1-949-232-7496
+              </span>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="At a glance">
+            <div class="hero-card-tag">Get started</div>
+
+            <div>
+              <div class="hero-card-title">Train with Carlson Gracie Irvine</div>
+              <div class="hero-card-sub">Fill out the form below page or call to schedule your first class.</div>
+            </div>
+
+            <div class="hero-card-row">
+              <span class="hero-card-label">New students</span>
+              <span class="hero-card-value">First week of class free</span>
+            </div>
+            <div class="hero-card-row">
+              <span class="hero-card-label">Programs</span>
+              <span class="hero-card-value">Kids • Adults • Fundamentals</span>
+            </div>
+
+            <div>
+              <div class="hero-card-label">What to expect</div>
+              <div class="hero-pill-row">
+                <span class="hero-pill">Friendly teammates</span>
+                <span class="hero-pill">Structured warmups</span>
+                <span class="hero-pill">Technical instruction</span>
+                <span class="hero-pill">Live rolling</span>
+              </div>
+            </div>
+
+            <p class="hero-note">
+              Just bring comfortable workout clothes. We’ll help with what class to start in and
+              how to get your first gi or no-gi gear.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- WHY TRAIN HERE -->
+      <section class="section" id="why">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="eyebrow">Why Carlson Gracie Irvine</div>
+            <h2>Serious training. Supportive culture.</h2>
+            <p class="section-subtitle">
+              Whether you’re a total beginner, a parent looking for kids classes, or a competitor,
+              we’ve got a program and training partners for you.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card">
+              <div class="why-icon">🥋</div>
+              <div class="why-title">Authentic Jiu Jitsu lineage</div>
+              <p class="why-text">
+                Train under the Carlson Gracie team banner with instruction rooted in proven,
+                pressure-tested Jiu Jitsu.
+              </p>
+            </article>
+
+            <article class="why-card">
+              <div class="why-icon">👨‍👩‍👧</div>
+              <div class="why-title">Family-friendly environment</div>
+              <p class="why-text">
+                Kids, teens, and adults all train here. We keep classes structured, safe, and
+                focused on respect and discipline.
+              </p>
+            </article>
+
+            <article class="why-card">
+              <div class="why-icon">🔥</div>
+              <div class="why-title">Goals beyond the mats</div>
+              <p class="why-text">
+                Build confidence, improve fitness, reduce stress, and challenge yourself every
+                single class—on and off the mat.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRAMS -->
+      <section class="section" id="programs">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="eyebrow">Programs</div>
+            <h2>Classes for kids and adults.</h2>
+            <p class="section-subtitle">
+              We offer structured programs designed to meet you where you are—whether it’s your
+              first time on the mats or you’ve been training for years.
+            </p>
+          </div>
+
+          <div class="programs-grid">
+            <article class="program-card">
+              <div class="program-tag">Kids • Youth</div>
+              <div class="program-title">Kids Brazilian Jiu Jitsu</div>
+              <p class="program-text">
+                Our kids program teaches respect, focus, and discipline while giving your child a
+                fun, safe way to burn energy and learn real self-defense.
+              </p>
+              <ul class="program-list">
+                <li> Ages 5-17</li>
+                <li> Bully-prevention &amp; confidence building</li>
+                <li> Clear rules, structured warmups, and games</li>
+              </ul>
+              <p class="program-meta">
+                Perfect for parents looking for a positive outlet and a strong community.
+              </p>
+            </article>
+
+            <article class="program-card">
+              <div class="program-tag">Adults</div>
+              <div class="program-title">Adult Jiu Jitsu – Fundamentals &amp; All Levels</div>
+              <p class="program-text">
+                Learn the core positions, submissions, and escapes while building cardio and strength
+                in a challenging but welcoming setting.
+              </p>
+              <ul class="program-list">
+                <li> Fundamentals classes for beginners</li>
+                <li> Mixed-level classes for more experience</li>
+                <li> Live sparring with coaching and feedback</li>
+              </ul>
+              <p class="program-meta">
+                No experience required. We’ll help you choose the right first class.
+              </p>
+            </article>
+
+            <article class="program-card">
+              <div class="program-tag">Competition &amp; more</div>
+              <div class="program-title">Advanced / Competition &amp; Open Mat</div>
+              <p class="program-text">
+                We provide support designed to help students looking to compete perform at the highest level. 
+              </p>
+              <ul class="program-list">
+                <li> Competition-focused rounds</li>
+                <li> Situational sparring &amp; drilling</li>
+                <li> Open mat for extra training time</li>
+              </ul>
+              <p class="program-meta">
+                Ask your coach when you’re ready to challenge yourself, and take your Jiu-Jitsu to the next level. 
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCHEDULE -->
+      <section class="section" id="schedule">
+        <div class="section-inner">
+          <div class="section-header">
+            <div class="eyebrow">Schedule</div>
+            <h2>Weekly training schedule.</h2>
+            <p class="section-subtitle">
+              Exact class times can change—always confirm with the latest schedule posted at the gym
+              or contact us directly.
+            </p>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-grid">
+              <div class="schedule-day">
+                <div class="schedule-day-title">Mon • Tue • Thu • Fri</div>
+                <div class="schedule-line">
+                  <span>Little Kids BJJ</span>
+                  <span>4:45-5:30 PM</span>
+                </div>
+                <div class="schedule-line">
+                  <span>Big Kids BJJ</span>
+                  <span>5:30-6:30 PM</span>
+                </div>
+                <div class="schedule-line">
+                  <span>Adults All Levels</span>
+                  <span>6:30-7:30 PM</span>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-title">Wed</div>
+                <div class="schedule-line">
+                  <span>Little Kids BJJ</span>
+                  <span>4:45-5:30 PM</span>
+                </div>
+                <div class="schedule-line">
+                  <span>Big Kids BJJ</span>
+                  <span>5:30-6:30 PM</span>
+                </div>
+                <div class="schedule-line">
+                  <span>Adults No-Gi</span>
+                  <span>6:30-7:30 PM</span>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-title">Saturday</div>
+                <div class="schedule-line">
+                  <span>Open Mat</span>
+                  <span>10:00-11:00 AM</span>
+                </div>
+                <div class="schedule-line">
+                  <span>Special events / seminars</span>
+                  <span>As announced</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="schedule-note">
+              Want the most up-to-date schedule?
+              <strong>Call or text 1-949-232-7496</strong> or message us on social media and we’ll
+              confirm the right class time for you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTRUCTORS & FACILITY -->
+      <section class="section" id="instructors">
+        <div class="section-inner">
+          <!-- Instructors header -->
+          <div class="section-header">
+            <div class="eyebrow">Instructors</div>
+            <h2>Experienced, technical coaching.</h2>
+            <p class="section-subtitle"></p>
+          </div>
+
+          <!-- 3-column instructor grid -->
+          <div class="instructor-grid">
+            <article class="instructor-card">
+              <img src="Prof Jason6_edited.png" class="instructor-photo" alt="Professor Jason">
+              <div class="instructor-role">Head Instructor</div>
+              <div class="instructor-name">Jason Youseph</div>
+              <p class="instructor-bio">
+                Professor Jason is a highly accomplished BJJ black belt under Master Allan Goes, with years of experience competing at the highest levels
+                as well as teaching both kids and adults. His career includes many major titles such as IBJJF American Nationals No-Gi Champion (2023), IBJJF Pan American Champion (2015),
+                multiple IBJJF Open gold medals, podium finishes at Abu Dhabi Trials, and 8× NABJJF Champion across several years. He has also ranked #1 in the Jiu Jitsu World League Black Belt division and earned
+                numerous top-three finishes in elite international tournaments. 
+              </p>
+            </article>
+
+            <article class="instructor-card">
+              <img src="Prof Michael3.png" class="instructor-photo" alt="Professor Michael">
+              <div class="instructor-role">Co-Instructor</div>
+              <div class="instructor-name">Michael Barbosa</div>
+              <p class="instructor-bio">
+                Passionate about helping beginners get comfortable on the mats, and guiding more advanced
+                students through details that make the difference.
+              </p>
+            </article>
+
+            <article class="instructor-card">
+              <img src="Prof David Serious2.png" class="instructor-photo" alt="Professor David">
+              <div class="instructor-role">Co-Instructor</div>
+              <div class="instructor-name">David Sa</div>
+              <p class="instructor-bio">
+                Leads our program with an emphasis on safety, respect, and building confidence
+                through positive challenges.
+              </p>
+            </article>
+          </div>
+
+          <!-- Facility section BELOW instructors -->
+          <div id="facility" class="facility-grid">
+            <!-- Left: text card -->
+            <div class="facility-card">
+              <div class="section-header">
+                <div class="eyebrow">Facility</div>
+                <h2>Clean mats. Focused training space.</h2>
+              </div>
+
+              <p>
+                Our academy is designed for one thing: quality training. Plenty of mat space, a clean
+                environment, and a layout that keeps classes running smoothly.
+              </p>
+
+              <ul class="facility-list">
+                <li>Large mat area for drilling and rolling</li>
+                <li>Dedicated kids and adults training times</li>
+                <li>Clean, regularly sanitized mats and equipment</li>
+                <li>Lobby area for parents to watch kids classes</li>
+                <li>Spring loaded Fuji Mats and Wall pads for extra safety and protection</li>
+              </ul>
+            </div>
+
+            <!-- Right: slideshow -->
+            <div class="slideshow" id="facility-slideshow">
+              <img src="adults.jpg" class="slide active" alt="Adults training">
+              <img src="kids.jpg" class="slide" alt="Kids class">
+              <img src="gym.png" class="slide" alt="Gym view">
+
+              <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-inner contact-grid">
+          <div>
+            <div class="section-header">
+              <div class="eyebrow">Get started</div>
+              <h2>Book your first class.</h2>
+              <p class="section-subtitle">
+                Fill out the form or contact us directly. We’ll help you pick the right class and
+                day to get started.
+              </p>
+            </div>
+
+            <form onsubmit="handleForm(event)">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Best number to reach you" />
+              </div>
+
+              <div>
+                <label for="message">What are you interested in?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Kids classes, adults fundamentals, competition training, etc."
+                  required
+                ></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Send inquiry</button>
+              <p style="font-size:0.78rem; color:var(--muted); margin-top:0.4rem;">
+                This form will open your email app with a pre-filled message to send to the academy.
+              </p>
+            </form>
+          </div>
+
+          <aside class="contact-info">
+            <div class="contact-rows">
+              <div class="contact-row">
+                <div class="contact-label">Address</div>
+                <div>
+                  1542 Edinger Ave - Suite F<br />
+                  Tustin, CA 92780
+                  <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6637.088811411465!2d-117.82950002383336!3d33.72073603516134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdbff18d60db1%3A0xe0257220ca4ffcca!2sCarlson%20Gracie%20Irvine%20Jiu%20Jitsu!5e0!3m2!1sen!2sus!4v1763607315317!5m2!1sen!2sus" 
+                  width="600" 
+                  height="450" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-label">Phone</div>
+                <div>1-949-232-7496</div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-label">Email</div>
+                <div><a href="mailto:carlsongracieirvine@gmail.com">carlsongracieirvine@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-label">Connect</div>
+              <div class="badge-row">
+                <a class="badge" href="https://www.facebook.com/CarlsonGracieIrvine/" target="_blank" rel="noreferrer">Facebook</a>
+                <a class="badge" href="https://www.instagram.com/carlsongracieirvine/" target="_blank" rel="noreferrer">Instagram</a>
+                <a class="badge" href="https://www.yelp.com/biz/carlson-gracie-irvine-tustin-2" target="_blank" rel="noreferrer">Yelp</a>
+                <a class="badge" href="https://www.youtube.com/channel/UCwCxrfqJJXIm9arW4Nxbcbw" target="_blank" rel="noreferrer">YouTube</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> Carlson Gracie Irvine. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="#top">Back to top</a>
+          <a href="https://www.instagram.com/carlsongracieirvine/" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/CarlsonGracieIrvine/" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://www.yelp.com/biz/carlson-gracie-irvine-tustin-2" target="_blank" rel="noreferrer">Yelp</a>
+          <a href="https://www.youtube.com/channel/UCwCxrfqJJXIm9arW4Nxbcbw" target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    function toggleNav() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("mobile-open");
+    }
+
+    // Form handler (no backend needed): opens an email draft with the submitted info
+    function handleForm(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const name = form.querySelector("#name")?.value?.trim() || "";
+      const email = form.querySelector("#email")?.value?.trim() || "";
+      const phone = form.querySelector("#phone")?.value?.trim() || "";
+      const message = form.querySelector("#message")?.value?.trim() || "";
+
+      // Basic validation (browser handles required fields too)
+      if (!name || !email || !message) {
+        alert("Please fill out your name, email, and what you're interested in.");
+        return;
+      }
+
+      const to = "carlsongracieirvine@gmail.com";
+      const subject = encodeURIComponent("Free Trial / First Class Request");
+      const body = encodeURIComponent(
+        `Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Interested in:
+${message}
+
+(Submitted from the website form)`
+      );
+
+      // Open default email app
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
+      // Optional UI feedback
+      alert("Your email draft is ready — press Send to book your first class.");
+      form.reset();
+    }
+// Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    let currentSlide = 0;
+
+    function showSlide(n) {
+      const slides = document.querySelectorAll('#facility-slideshow .slide');
+      if (!slides.length) return;
+      currentSlide = (n + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    function changeSlide(n) {
+      showSlide(currentSlide + n);
+    }
+
+    // Show first slide on load
+    window.onload = () => showSlide(0);
+  </script>
+  <script>
+    // TOP HERO SLIDESHOW
+    let topSlideIndex = 0;
+    function showTopSlide(n) {
+      const slides = document.querySelectorAll('#top-slideshow .slide');
+      if (!slides.length) return;
+
+      topSlideIndex = (n + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === topSlideIndex);
+      });
+    }
+    function changeTopSlide(step) {
+      showTopSlide(topSlideIndex + step);
+    }
+
+    setInterval(() => changeTopSlide(1), 4000);
+
+
+    // FACILITY SLIDESHOW (existing one)
+    let facilitySlideIndex = 0;
+    function showFacilitySlide(n) {
+      const slides = document.querySelectorAll('#facility-slideshow .slide');
+      if (!slides.length) return;
+
+      facilitySlideIndex = (n + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === facilitySlideIndex);
+      });
+    }
+    function changeSlide(step) {   // keep this name since your facility arrows use it
+      showFacilitySlide(facilitySlideIndex + step);
+    }
+
+    // Initialize both slideshows on page load
+    window.addEventListener('load', () => {
+      showTopSlide(0);
+      showFacilitySlide(0);
+    });
+</script>
+
+</body>
+</html>
